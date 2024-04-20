@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\projects\DM_project\DM_project\bin\Debug\net8.0\DM_project.exe
+C:\Users\User\source\repos\projects\DM_project\DM_project\bin\Debug\net8.0\DM_project.deps.json
+C:\Users\User\source\repos\projects\DM_project\DM_project\bin\Debug\net8.0\DM_project.runtimeconfig.json
+C:\Users\User\source\repos\projects\DM_project\DM_project\bin\Debug\net8.0\DM_project.dll
+C:\Users\User\source\repos\projects\DM_project\DM_project\bin\Debug\net8.0\DM_project.pdb
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.AssemblyInfo.cs
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.dll
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\refint\DM_project.dll
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.pdb
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\DM_project.genruntimeconfig.cache
+C:\Users\User\source\repos\projects\DM_project\DM_project\obj\Debug\net8.0\ref\DM_project.dll
