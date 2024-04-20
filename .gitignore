@@ -1,0 +1,6 @@
+bin/*
+obj/*
+.env
+.env.sample
+.env.local
+.idea/*
