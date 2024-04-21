@@ -129,10 +129,10 @@ public class Program
                 matrixDFSTimeSum += iterationTimeDFS[1][n];
             }
 
-            var bfsListAvgTime = $"{minVertices}    {density.ToString("0.0", CultureInfo.InvariantCulture)}  {listBFSTimeSum / iterationTimeBFS[0].Count}";
-            var bfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0", CultureInfo.InvariantCulture)}    {matrixBFSTimeSum / iterationTimeBFS[1].Count}";
-            var dfsListAvgTime = $"{minVertices}    {density.ToString("0.0", CultureInfo.InvariantCulture)}  {listDFSTimeSum / iterationTimeDFS[0].Count}";
-            var dfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0", CultureInfo.InvariantCulture)}    {matrixDFSTimeSum / iterationTimeDFS[1].Count}";
+            var bfsListAvgTime = $"{minVertices}, {density.ToString("0.0", CultureInfo.InvariantCulture)}, {listBFSTimeSum / iterationTimeBFS[0].Count}";
+            var bfsMatrixAvgTime = $"{minVertices}, {density.ToString("0.0", CultureInfo.InvariantCulture)}, {matrixBFSTimeSum / iterationTimeBFS[1].Count}";
+            var dfsListAvgTime = $"{minVertices}, {density.ToString("0.0", CultureInfo.InvariantCulture)}, {listDFSTimeSum / iterationTimeDFS[0].Count}";
+            var dfsMatrixAvgTime = $"{minVertices}, {density.ToString("0.0", CultureInfo.InvariantCulture)}, {matrixDFSTimeSum / iterationTimeDFS[1].Count}";
 
             WriteToFile(bfsListAvgTime, "BFS", "List");
             WriteToFile(bfsMatrixAvgTime, "BFS", "Matrix");
