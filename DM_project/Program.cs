@@ -93,17 +93,17 @@ public class Program
 
                 var matrixTimerBFS = System.Diagnostics.Stopwatch.StartNew();
                 BFS_adjmatrix(1, graphAsMatrix, vertices);
-                listTimerBFS.Stop();
+                matrixTimerBFS.Stop();
                 iterationTimeBFS[1].Add(matrixTimerBFS.ElapsedMilliseconds);
 
                 var listTimerDFS = System.Diagnostics.Stopwatch.StartNew();
                 graphAsList.DFS_adjlist(1);
-                listTimerBFS.Stop();
+                listTimerDFS.Stop();
                 iterationTimeDFS[0].Add(listTimerDFS.ElapsedMilliseconds);
 
                 var matrixTimerDFS = System.Diagnostics.Stopwatch.StartNew();
                 DFS_adjmatrix(1, graphAsMatrix, vertices);
-                listTimerBFS.Stop();
+                matrixTimerDFS.Stop();
                 iterationTimeDFS[1].Add(matrixTimerDFS.ElapsedMilliseconds);
             }
             long listBFSTimeSum = 0;
@@ -111,20 +111,18 @@ public class Program
             {
                 listBFSTimeSum += iterationTimeBFS[0][n];
             }
+            
             long matrixBFSTimeSum = 0;
-
             for (int n = 0; n < iterationTimeBFS[1].Count(); n++)
             {
                 matrixBFSTimeSum += iterationTimeBFS[1][n];
             }
             long listDFSTimeSum = 0;
-
             for (int n = 0; n < iterationTimeDFS[0].Count(); n++)
             {
                 listDFSTimeSum += iterationTimeDFS[0][n];
             }
             long matrixDFSTimeSum = 0;
-
             for (int n = 0; n < iterationTimeDFS[1].Count(); n++)
             {
                 matrixDFSTimeSum += iterationTimeDFS[1][n];
