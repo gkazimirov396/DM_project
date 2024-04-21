@@ -128,10 +128,10 @@ public class Program
                 matrixDFSTimeSum += iterationTimeDFS[1][n];
             }
 
-            var bfsListAvgTime = $"{minVertices}_{density.ToString("0.0")}_{listBFSTimeSum / iterationTimeBFS[0].Count}";
-            var bfsMatrixAvgTime = $"{minVertices}_{density.ToString("0.0")}_{matrixBFSTimeSum / iterationTimeBFS[1].Count}";
-            var dfsListAvgTime = $"{minVertices}_{density.ToString("0.0")}_{listDFSTimeSum / iterationTimeDFS[0].Count}";
-            var dfsMatrixAvgTime = $"{minVertices}_{density.ToString("0.0")}_{matrixDFSTimeSum / iterationTimeDFS[1].Count}";
+            var bfsListAvgTime = $"{minVertices}    {density.ToString("0.0")}  {listBFSTimeSum / iterationTimeBFS[0].Count}";
+            var bfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0")}    {matrixBFSTimeSum / iterationTimeBFS[1].Count}";
+            var dfsListAvgTime = $"{minVertices}    {density.ToString("0.0")}  {listDFSTimeSum / iterationTimeDFS[0].Count}";
+            var dfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0")}    {matrixDFSTimeSum / iterationTimeDFS[1].Count}";
 
             WriteToFile(bfsListAvgTime, "BFS", "List");
             WriteToFile(bfsMatrixAvgTime, "BFS", "Matrix");
