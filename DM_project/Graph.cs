@@ -1,7 +1,7 @@
 ﻿namespace DM_project;
 
 
-internal class Graph
+public class Graph
 {
     private int vertices;
     private List<int>[] adjacencyList;
