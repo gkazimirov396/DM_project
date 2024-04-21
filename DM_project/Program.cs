@@ -1,12 +1,13 @@
 ﻿using DM_project;
 using System.Diagnostics;
+using System.Globalization;
 
 
 public class Program
 {
     public static void WriteToFile(string data, string algorithm, string graphType)
     {
-        var path = $"D:\\DM_project_results\\timedata_{algorithm}_{graphType}.tsv";
+        var path = $"D:\\DM_project_results\\timedata_{algorithm}_{graphType}.csv";
         using (StreamWriter writer = new StreamWriter(path, append: true)) 
         {
             writer.WriteLine(data);
@@ -128,10 +129,10 @@ public class Program
                 matrixDFSTimeSum += iterationTimeDFS[1][n];
             }
 
-            var bfsListAvgTime = $"{minVertices}    {density.ToString("0.0")}  {listBFSTimeSum / iterationTimeBFS[0].Count}";
-            var bfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0")}    {matrixBFSTimeSum / iterationTimeBFS[1].Count}";
-            var dfsListAvgTime = $"{minVertices}    {density.ToString("0.0")}  {listDFSTimeSum / iterationTimeDFS[0].Count}";
-            var dfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0")}    {matrixDFSTimeSum / iterationTimeDFS[1].Count}";
+            var bfsListAvgTime = $"{minVertices}    {density.ToString("0.0", CultureInfo.InvariantCulture)}  {listBFSTimeSum / iterationTimeBFS[0].Count}";
+            var bfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0", CultureInfo.InvariantCulture)}    {matrixBFSTimeSum / iterationTimeBFS[1].Count}";
+            var dfsListAvgTime = $"{minVertices}    {density.ToString("0.0", CultureInfo.InvariantCulture)}  {listDFSTimeSum / iterationTimeDFS[0].Count}";
+            var dfsMatrixAvgTime = $"{minVertices}  {density.ToString("0.0", CultureInfo.InvariantCulture)}    {matrixDFSTimeSum / iterationTimeDFS[1].Count}";
 
             WriteToFile(bfsListAvgTime, "BFS", "List");
             WriteToFile(bfsMatrixAvgTime, "BFS", "Matrix");
