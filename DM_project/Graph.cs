@@ -128,13 +128,12 @@ public class Graph
             if (!visited[vertex])
             {
                 visited[vertex] = true;
-            }
-            visited[vertex] = true;
-            foreach (int i in adjacencyList[vertex])
-            {
-                if (!visited[i])
+                foreach (int i in adjacencyList[vertex])
                 {
-                    stack.Push(i);
+                    if (!visited[i])
+                    {
+                        stack.Push(i);
+                    }
                 }
             }
         }
