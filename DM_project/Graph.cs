@@ -94,5 +94,99 @@ internal class Graph
 
         return matrix;
     }
+    public bool[] BFS_adjlist(int vertex)
+    {
+        bool[] visited = new bool[vertices];
+        Queue<int> queue = new Queue<int>();
+
+        visited[vertex] = true;
+        queue.Enqueue(vertex);
+
+        while (queue.Count != 0)
+        {
+            vertex = queue.Dequeue();
+            foreach (int i in adjacencyList[vertex])
+            {
+                if (!visited[i])
+                {
+                    visited[i] = true;
+                    queue.Enqueue(i);
+                }
+            }
+        }
+        return visited;
+    }
+    public bool[] BFS_adjmatrix(int vertex, int[,] matrix)
+    {
+        bool[] visited = new bool[vertices];
+        Queue<int> queue = new Queue<int>();
+
+        visited[vertex] = true;
+        queue.Enqueue(vertex);
+
+        while (queue.Count != 0)
+        {
+            vertex = queue.Dequeue();
+
+            for (int i = 0; i < vertices; ++i)
+            {
+                if (matrix[vertex, i] == 1 && !visited[i])
+                {
+                    visited[i] = true;
+                    queue.Enqueue(i);
+                }
+            }
+        }
+        return visited;
+    }
+    public bool[] DFS_adjlist(int vertex)
+    {
+        bool[] visited = new bool[vertices];
+        Stack<int> stack = new Stack<int>();
+        stack.Push(vertex);
+
+        while (stack.Count != 0)
+        {
+            vertex = stack.Pop();
+            if (!visited[vertex])
+            {
+                visited[vertex] = true;
+            }
+            foreach (int i in adjacencyList[vertex])
+            {
+                if (!visited[i])
+                {
+                    stack.Push(i);
+                }
+            }
+        }
+        return visited;
+    }
+    public bool[] DFS_adjmatrix(int vertex, int[,] matrix)
+    {
+        bool[] visited = new bool[vertices];
+        Stack<int> stack = new Stack<int>();
+
+        stack.Push(vertex);
+
+        while (stack.Count != 0)
+        {
+            vertex = stack.Pop();
+
+            if (!visited[vertex])
+            {
+                visited[vertex] = true;
+
+                for (int i = 0; i < vertices; ++i)
+                {
+                    if (matrix[vertex, i] == 1 && !visited[i])
+                    {
+                        stack.Push(i);
+                    }
+                }
+            }
+        }
+        return visited;
+    }
 }
 

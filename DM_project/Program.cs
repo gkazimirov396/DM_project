@@ -7,6 +7,12 @@ g.AddEdge(1, 2);
 g.AddEdge(1, 3);
 g.AddEdge(2, 4);
 
+bool[] result = g.BFS_adjlist(0);
+
+foreach (bool b in result)
+{
+    Console.WriteLine(b);
+}
 Console.WriteLine("Adjacency Lists:");
 g.PrintAdjacencyList();
 
